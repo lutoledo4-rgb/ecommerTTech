@@ -1,0 +1,194 @@
+* { margin: 2; padding: 2; box-sizing: border-box;}
+body {
+    font-family: 'Times new roman', sans-serif;
+    background-color: #f0f0f0;
+    font-size: 0.5cm;
+}
+
+#main-title {font-size: 24px;color: lightblue;text-align: center;}
+
+h1 {
+    font-size: 2cm;
+    position: relative;
+    color: lightskyblue;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #747373;
+    /*background-color: #706c6c;*/
+}
+
+header
+{   
+    display: flex;          /* Turns container into a flexbox */
+    align-items: center;    /* Vertically centers items */
+    gap: 10px; 
+    background-color: #747373;
+    justify-content: center;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+
+}
+
+header img {
+    width: 150px;           /* Fixed width for the logo */
+    height: auto;           /* Maintains aspect ratio */
+    border-radius: 50%;     /* Makes the image circular */
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: lightskyblue;
+    background-color: #747373;
+}
+
+nav ul li a{
+    display: inline;
+    color: lightskyblue;
+    font-size: 1cm;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: violet;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+body{background-color: #747373;}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.container img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Estilo general para todas las secciones */
+section {
+    padding: 20px;             /* Espacio interior */
+    text-align: center;        /* Centra el texto */
+  }
+  
+  /* Contenedor de los productos con Flexbox */
+.productos-container {
+    display: flex;             /* Activa Flexbox */
+    justify-content: center;   /* Centra horizontalmente */
+    gap: 20px;                 /* Espacio entre productos */
+    flex-wrap: wrap;           /* Permite que bajen a otra línea en pantallas pequeñas */
+    margin-top: 20px;          /* Espacio superior */
+  }
+  
+  /* Cada tarjeta de producto */
+.producto {
+    text-align: center;        /* Centra el contenido */
+  }
+  
+  /* Imágenes de los productos */
+.producto img {
+    width: 150px;              /* Ancho fijo */
+    height: 150px;             /* Alto fijo */
+    object-fit: cover;         /* Cubre el área sin deformarse */
+  }
+
+
+#productos {
+  display: flex;
+  justify-content: center;   /* Centra horizontalmente */
+  gap: 20px;
+  padding: 20px;
+  color: whitesmoke;
+  flex-wrap: wrap;           /* Permite que bajen a otra línea en pantallas pequeñas */
+    margin-top: 20px;          /* Espacio superior */
+}
+
+.tarjeta {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  color: lightskyblue;
+}
+
+.tarjeta img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+
+footer {
+    background-color: #706c6c;
+    /*background-color: #747373;*/
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+#btn-carrito {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: lightskyblue;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#contador-carrito {
+  background: black;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+
+#btn-carrito:hover {
+  background: #0056b3;
+}
+
+
+
+  /* Media Query para CELULARES (pantallas pequeñas, hasta 600px) */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;  /* Muestra los enlaces uno debajo del otro */
+    gap: 10px;               /* Menor espacio entre ellos */
+  }
+
+  .productos-container {
+    flex-direction: column;  /* Apila los productos en una columna */
+    align-items: center;     /* Centra verticalmente */
+  }
+}
+
+/* Media Query para TABLETS (de 601px a 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .productos-container {
+    justify-content: space-evenly; /* Distribuye los productos uniformemente */
+  }
+}
+
+/* Media Query para PC (más de 1024px) */
+@media (min-width: 1025px) {
+  .productos-container {
+    justify-content: space-between; /* Aumenta el espacio entre productos */
+  }
+}
